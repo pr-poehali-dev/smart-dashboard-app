@@ -155,7 +155,7 @@ const HeroHeader = () => {
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-0">
-            <div className="flex w-full justify-between lg:w-auto">
+            <div className="flex w-full justify-between lg:w-auto lg:-ml-8">
               <a href="/" aria-label="home" className="flex items-center space-x-2">
                 <Logo />
               </a>
@@ -208,8 +208,8 @@ const HeroHeader = () => {
                   size="sm"
                   className={cn(
                     isScrolled
-                      ? "lg:inline-flex bg-orange-500 hover:bg-orange-600"
-                      : "hidden bg-orange-500 hover:bg-orange-600",
+                      ? "lg:inline-flex bg-sky-400 hover:bg-sky-500"
+                      : "hidden bg-sky-400 hover:bg-sky-500",
                   )}
                 >
                   <span>Запросить доступ</span>
@@ -226,7 +226,7 @@ const HeroHeader = () => {
 const Logo = ({ className }: { className?: string }) => {
   return (
     <div className={cn("flex items-center space-x-2", className)}>
-      <div className="bg-orange-500 rounded-lg p-2">
+      <div className="bg-sky-400 rounded-lg p-2">
         <Eye className="h-6 w-6 text-white" />
       </div>
       <span className="text-xl font-bold">Окулус-Фельдшер</span>
@@ -240,7 +240,7 @@ const CardDecorator = ({ children }: { children: React.ReactNode }) => (
     className="relative mx-auto size-36 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
   >
     <div className="absolute inset-0 [--border:black] dark:[--border:white] bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10" />
-    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l border-orange-200">
+    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l border-sky-200">
       {children}
     </div>
   </div>
@@ -284,8 +284,8 @@ export default function SoftwareDevelopmentWebsite() {
           aria-hidden
           className="z-[2] absolute inset-0 pointer-events-none isolate opacity-50 contain-strict hidden lg:block"
         >
-          <div className="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(25,100%,50%,.08)_0,hsla(25,100%,45%,.02)_50%,hsla(25,100%,40%,0)_80%)]" />
-          <div className="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(25,100%,50%,.06)_0,hsla(25,100%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
+          <div className="w-[35rem] h-[80rem] -translate-y-[350px] absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(199,100%,60%,.08)_0,hsla(199,100%,55%,.02)_50%,hsla(199,100%,50%,0)_80%)]" />
+          <div className="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(199,100%,60%,.06)_0,hsla(199,100%,55%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
         </div>
 
         <section>
@@ -318,7 +318,7 @@ export default function SoftwareDevelopmentWebsite() {
 
                   <h1 className="mt-8 max-w-4xl mx-auto text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]">
                     Операция без{" "}
-                    <span className="inline-block text-orange-500 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
+                    <span className="inline-block text-sky-400 text-6xl md:text-7xl xl:text-[5.25rem] font-semibold">
                       лишних поездок
                     </span>
                   </h1>
@@ -341,12 +341,12 @@ export default function SoftwareDevelopmentWebsite() {
                   }}
                   className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row"
                 >
-                  <div key={1} className="bg-orange-500/10 rounded-[14px] border border-orange-200 p-0.5">
-                    <Button size="lg" className="rounded-xl px-5 text-base bg-orange-500 hover:bg-orange-600">
+                  <div key={1} className="bg-sky-400/10 rounded-[14px] border border-sky-200 p-0.5">
+                    <Button size="lg" className="rounded-xl px-5 text-base bg-sky-400 hover:bg-sky-500">
                       <span className="text-nowrap">Запросить демо-доступ</span>
                     </Button>
                   </div>
-                  <Button key={2} size="lg" variant="ghost" className="h-10.5 rounded-xl px-5 hover:text-orange-500">
+                  <Button key={2} size="lg" variant="ghost" className="h-10.5 rounded-xl px-5 hover:text-sky-400">
                     <span className="text-nowrap">Как это работает</span>
                   </Button>
                 </AnimatedGroup>
@@ -371,9 +371,9 @@ export default function SoftwareDevelopmentWebsite() {
                   aria-hidden
                   className="bg-gradient-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                 />
-                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-orange-200 p-4 shadow-lg shadow-orange-500/15 ring-1">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-950 dark:to-orange-900 aspect-[15/8] relative rounded-2xl border border-orange-200 overflow-hidden">
-                    <GridMotion items={gridItems} gradientColor="rgba(249, 115, 22, 0.1)" className="h-full w-full" />
+                <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border border-sky-200 p-4 shadow-lg shadow-sky-400/15 ring-1">
+                  <div className="bg-gradient-to-br from-sky-50 to-sky-100 dark:from-sky-950 dark:to-sky-900 aspect-[15/8] relative rounded-2xl border border-sky-200 overflow-hidden">
+                    <GridMotion items={gridItems} gradientColor="rgba(56, 189, 248, 0.1)" className="h-full w-full" />
                   </div>
                 </div>
               </div>
@@ -381,7 +381,7 @@ export default function SoftwareDevelopmentWebsite() {
               <section className="bg-background pb-16 pt-16 md:pb-32">
                 <div className="group relative m-auto max-w-5xl px-6">
                   <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-                    <a href="#contact" className="block text-sm duration-150 hover:opacity-75 text-orange-500">
+                    <a href="#contact" className="block text-sm duration-150 hover:opacity-75 text-sky-400">
                       <span>Подключиться к платформе</span>
                       <ChevronRight className="ml-1 inline-block size-3" />
                     </a>
@@ -470,17 +470,17 @@ export default function SoftwareDevelopmentWebsite() {
           <div className="mx-auto max-w-5xl px-6">
             <div className="text-center">
               <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
-                Почему выбирают <span className="text-orange-500">Окулус-Фельдшер</span>
+                Почему выбирают <span className="text-sky-400">Окулус-Фельдшер</span>
               </h2>
               <p className="mt-4 text-muted-foreground">
                 Платформа закрывает разрыв между районным звеном и областной хирургией — пациент готов к операции без лишних визитов и задержек.
               </p>
             </div>
-            <Card className="mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 border-orange-200 *:text-center md:mt-16 md:max-w-full md:grid-cols-3 md:divide-x md:divide-y-0">
+            <Card className="mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 border-sky-200 *:text-center md:mt-16 md:max-w-full md:grid-cols-3 md:divide-x md:divide-y-0">
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Zap className="size-6 text-orange-500" aria-hidden />
+                    <Zap className="size-6 text-sky-400" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">Ноль лишних поездок</h3>
@@ -496,7 +496,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <ShieldCheck className="size-6 text-orange-500" aria-hidden />
+                    <ShieldCheck className="size-6 text-sky-400" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">Протоколы областной больницы</h3>
@@ -512,7 +512,7 @@ export default function SoftwareDevelopmentWebsite() {
               <div className="group shadow-zinc-950/5">
                 <CardHeader className="pb-3">
                   <CardDecorator>
-                    <Users className="size-6 text-orange-500" aria-hidden />
+                    <Users className="size-6 text-sky-400" aria-hidden />
                   </CardDecorator>
 
                   <h3 className="mt-6 font-medium">Три роли в одной системе</h3>
@@ -529,7 +529,7 @@ export default function SoftwareDevelopmentWebsite() {
         </section>
       </main>
 
-      <footer className="bg-background border-t border-orange-200">
+      <footer className="bg-background border-t border-sky-200">
         <div className="mx-auto max-w-7xl py-16 px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
@@ -539,12 +539,12 @@ export default function SoftwareDevelopmentWebsite() {
                 Цифровой мост между районным фельдшером и областным хирургом. Пациенты из отдалённых районов получают операцию быстрее — без лишних поездок и задержек.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                   </svg>
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                   </svg>
@@ -562,27 +562,27 @@ export default function SoftwareDevelopmentWebsite() {
               <h3 className="text-sm font-semibold text-foreground">Функции</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Загрузка анализов
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Проверка хирургом
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Назначение операции
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Статус пациента
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Напоминания и уведомления
                   </a>
                 </li>
@@ -594,27 +594,27 @@ export default function SoftwareDevelopmentWebsite() {
               <h3 className="text-sm font-semibold text-foreground">О платформе</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     О проекте
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Протоколы подготовки
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Безопасность данных
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     Для больниц
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                     FAQ
                   </a>
                 </li>
@@ -673,17 +673,17 @@ export default function SoftwareDevelopmentWebsite() {
           </div>
 
           {/* Bottom section */}
-          <div className="mt-12 pt-8 border-t border-orange-200">
+          <div className="mt-12 pt-8 border-t border-sky-200">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-sm text-muted-foreground">2025 Окулус-Фельдшер. Все права защищены.</div>
               <div className="flex flex-wrap justify-center sm:justify-end gap-x-6 gap-y-2 text-sm">
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                   Политика конфиденциальности
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                   Условия использования
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-orange-500 transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-sky-400 transition-colors">
                   Политика cookies
                 </a>
               </div>
